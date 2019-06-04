@@ -1,209 +1,135 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 100px;
 }
 
-.codeCard {
+.codeInfoPanelWrapper {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.codeInfoPanelWrapper button {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.codeInfoPanelWrapper * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.codeInfoPanel {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  font-size: 16px;
+}
+
+.codeInfoCardWrapper {
+  flex-basis: 50%;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.codeInfoCard {
+}
+
+.codeInfoCard h1 {
+  font-size: 115%;
+  padding: 20px 0 10px 0;
+  border-bottom: 1.5px solid #666666;
+  margin-bottom: 20px;
+}
+
+.codeInfoCard p {
+  margin: 10px 0;
+  line-height: 150%;
+}
+
+.codeInfoCard a.externalLink {
+  background-color: #ffffff;
+  border: #2f915f solid 2px;
+  color: #2f915f;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+  /* transition: background-color 0.1s ease-in;
+  transition: color 0.1s ease-in; */
+}
+
+.codeInfoCard a.externalLink:hover {
+  background-color: #2f915f;
+  color: #ffffff;
+}
+
+.codeExampleCardWrapper {
+  flex-basis: 50%;
+  min-width: 378px;
+  padding: 0 10px;
+}
+
+.codeExampleCard {
+  height: 100%;
   background: #303030;
   color: #ffffff;
-  padding: 20px;
+  padding: 20px 20px 15px 20px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 10px 10px 100px -10px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: inset 10px 10px 100px -10px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 10px 10px 100px -10px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
-.codeCard button {
+.codeExampleCard .buttonContainer {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  overflow-x: scroll;
+}
+
+.codeExampleCard button {
+  font-size: 115%;
+  flex-basis: 25%;
+  flex-grow: 1;
+  padding: 0 10px 10px 10px;
   background: none;
   border: none;
   color: #bbbbbb;
+  text-shadow: none;
+  border-bottom: 1.5px solid #666666;
+  transition: border-bottom 0.5s ease-out;
 }
 
-.codeCard button.active {
+.codeExampleCard button.active {
   color: #ffffff;
+  /* font-weight: bold; */
+  text-shadow: -0.3px 0 white, 0.03px 0 white;
+  border-bottom: 1.5px solid #99e394;
 }
 
-.codeCard button:hover {
+.codeExampleCard button.active:hover {
+  border-bottom: 1.5px solid #99e394;
+}
+
+.codeExampleCard button:hover {
   color: #ffffff;
+  /* font-weight: bold; */
+  text-shadow: -0.3px 0 white, 0.03px 0 white;
+  border-bottom: 1.5px solid #ffffff;
   cursor: pointer;
 }
 
-.search,
-.details,
-.search-params {
-  background-color: #c4b2bc;
-  width: 95%;
-  margin: 0 auto;
-  padding: 15px;
-  border-radius: 5px;
-}
-
-.pet {
-  width: 100%;
-  height: 100px;
-  display: block;
-  overflow: hidden;
-  margin: 15px 0;
-}
-
-.pet img {
-  width: 100px;
-  min-height: 100px;
-}
-
-.info {
-  float: left;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.image-container {
-  clip-path: circle(50% at 50% 50%);
-  width: 100px;
-  height: 100px;
-  float: left;
-  margin-right: 20px;
-}
-
-.pet h1 {
-  white-space: nowrap;
-  font-weight: normal;
-  font-size: 30px;
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-}
-
-.pet h2 {
-  white-space: nowrap;
-  font-weight: normal;
-  font-size: 20px;
-  margin: 0;
-}
-
-header a {
-  color: #f2af29;
-  font-size: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-}
-
-header {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  padding: 20px;
-}
-
-.details p {
-  line-height: 2;
-}
-
-.details h1,
-.details h2 {
-  text-align: center;
-}
-
-.carousel {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 400px;
-}
-
-.carousel > img {
-  max-width: 45%;
-  max-height: 400px;
-}
-
-.carousel-smaller {
-  width: 50%;
-}
-
-.carousel-smaller > img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 15px;
-  cursor: pointer;
-  border: 2px solid #333;
-}
-
-.carousel-smaller > img.active {
-  border-color: #ad343e;
-  opacity: 0.6;
-}
-
-.search-params label {
-  display: block;
-  width: 60px;
-}
-
-.search-params input,
-.search-params select {
-  margin-bottom: 30px;
-  font-size: 18px;
-  height: 30px;
-  width: 325px;
-}
-
-.search-params button,
-#modal button,
-.details button {
-  background-color: #ad343e;
-  padding: 5px 25px;
-  color: white;
-  font-size: 18px;
-  border: #333 1px solid;
-  border-radius: 5px;
-  display: block;
-  margin: 0 auto;
-  cursor: pointer;
-}
-
-.search-params button:hover {
-  background-color: #c36b72;
-}
-
-.search-params button:active {
-  background-color: #5f1d22;
-}
-
-.search-params button:focus {
-  border: 1px solid cornflowerblue;
-}
-
-#modal {
-  background-color: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#modal:empty {
-  display: none;
-}
-
-#modal > div {
-  background-color: white;
-  max-width: 500px;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-#modal .buttons button {
-  display: inline-block;
-  margin-right: 15px;
+.codeExampleCard pre {
+  overflow-x: scroll;
+  /* text-overflow: ellipsis; */
+  line-height: 150%;
+  padding-bottom: 20px;
 }
