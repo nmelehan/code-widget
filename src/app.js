@@ -30,7 +30,12 @@ If you use Terraform to provision your infrastructure, you can use the `linode_v
     },
     {
       name: "CLI",
-      extraLinks: [],
+      extraLinks: [
+        {
+          href: "https://linode.com/docs/platform/api/using-the-linode-cli/",
+          title: "Using the Linode CLI"
+        }
+      ],
       snippet:
         'linode-cli volumes create \\\n\
   --label "my-volume" \\\n\
