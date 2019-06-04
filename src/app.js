@@ -18,7 +18,7 @@ If you use Terraform to provision your infrastructure, you can use the `linode_v
       name: "cURL",
       extraLinks: [],
       snippet:
-        'curl -H "Content-Type: application/jsonType: application/jsonType: application/jsonType: application/json" \\\n\
+        'curl -H "Content-Type: application/jsonType" \\\n\
   -H "Authorization: Bearer $token" \\\n\
   -X POST -d \'{ \\\n\
     "label": "my-volume", \\\n\
