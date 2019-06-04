@@ -22,8 +22,8 @@ If you use Terraform to provision your infrastructure, you can use the `linode_v
   -H "Authorization: Bearer $token" \\\n\
   -X POST -d \'{ \\\n\
     "label": "my-volume", \\\n\
-    "region": "us-east", \\\n\
     "size": 100, \\\n\
+    "region": "us-east", \\\n\
     "linode_id": 1234567 \\\n\
   }\' \\\n\
   https://api.linode.com/v4/volumes'
@@ -34,32 +34,16 @@ If you use Terraform to provision your infrastructure, you can use the `linode_v
       snippet:
         'linode-cli volumes create \\\n\
   --label "my-volume" \\\n\
-  --region "us-east" \\\n\
   --size "100" \\\n\
-  --linode_id "1234567"',
-      replacements: [
-        {
-          label: "Volume Name",
-          placeholderText: "volumeName",
-          example: "my-volume",
-          regex: { string: "^[a-z0-9]+$", flags: "i" }
-        }
-      ]
+  --region "us-east" \\\n\
+  --linode_id "1234567"'
     },
     {
       name: "Python",
       extraLinks: [],
       snippet: "Python\n\
 my-volume\n\
-    world",
-      replacements: [
-        {
-          label: "Volume Name",
-          placeholderText: "volumeName",
-          example: "my-volume",
-          regex: { string: "^[a-z0-9]+$", flags: "i" }
-        }
-      ]
+    world"
     },
     {
       name: "Terraform",
@@ -68,24 +52,15 @@ my-volume\n\
           href:
             "https://linode.com/docs/applications/configuration-management/beginners-guide-to-terraform/",
           title: "A Beginner's Guide to Terraform"
-        },
-        {
-          href:
-            "https://linode.com/docs/applications/configuration-management/beginners-guide-to-terraform/",
-          title: "A Link to the Past"
         }
       ],
-      snippet: "Terraform\n\
-my-volume\n\
-world",
-      replacements: [
-        {
-          label: "Volume Name",
-          placeholderText: "volumeName",
-          example: "my-volume",
-          regex: { string: "^[a-z0-9]+$", flags: "i" }
-        }
-      ]
+      snippet:
+        'resource "linode_volume" "my-volume" {\n\
+  label = "my-volume"\n\
+  size = "100"\n\
+  region = "${linode_instance.my-linode.region}"\n\
+  linode_id = "${linode_instance.my-linode.id}"\n\
+}'
     }
   ]
 };
