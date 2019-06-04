@@ -35,17 +35,19 @@ class CodeInfoPanel extends React.Component {
             </div>
           </div>
           <div className="codeExampleCardWrapper">
-            <CodeExampleCard
-              codeExampleNames={this.props.codeInfo.codeExamples.map(
-                example => example.name
-              )}
-              codeExampleSnippet={
-                this.props.codeInfo.codeExamples[this.state.activeExample]
-                  .snippet
-              }
-              activeExample={this.state.activeExample}
-              handleExampleChange={this.handleExampleChange}
-            />
+            <div className="codeExampleCardDropShadow">
+              <CodeExampleCard
+                codeExampleNames={this.props.codeInfo.codeExamples.map(
+                  example => example.name
+                )}
+                codeExampleSnippet={
+                  this.props.codeInfo.codeExamples[this.state.activeExample]
+                    .snippet
+                }
+                activeExample={this.state.activeExample}
+                handleExampleChange={this.handleExampleChange}
+              />
+            </div>
           </div>
         </div>
       </div>
