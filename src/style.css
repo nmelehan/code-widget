@@ -125,6 +125,10 @@ body {
   transition: border-bottom 0.5s ease-out;
 }
 
+.codeExampleCard button:focus {
+  outline: 0;
+}
+
 .codeExampleCard button.active {
   color: #ffffff;
   /* font-weight: bold; */
