@@ -1,5 +1,9 @@
 # code-widget
 
+Preview on GitHub Pages at http://nathan.exchange/code-widget/
+
+## Node script instructions:
+
 Download and run:
 
 `npm install`
