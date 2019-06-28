@@ -9,6 +9,11 @@ const createAndAttachInfo = {
 If you use Terraform to provision your infrastructure, you can use the `linode_volume` resource to entirely manage your Volumes from within your Terraform plan.",
   links: [
     {
+      href:
+        "https://linode.com/docs/platform/api/create-block-storage-volumes-with-the-linode-api/",
+      title: "Manage Block Storage Volumes with the Linode API"
+    },
+    {
       href: "https://developers.linode.com/api/v4/",
       title: "Linode API Reference"
     }
